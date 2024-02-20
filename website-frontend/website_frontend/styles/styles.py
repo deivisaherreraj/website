@@ -14,6 +14,7 @@ class Size(Enum):
     DEFAULT = "1em"
     LARGE = "1.5em"
     BIG = "2em"
+    VERY_LARGE = "3.5em"
     VERY_BIG = "4em"
 
 # Styles
@@ -32,7 +33,7 @@ BASE_STYLE = {
         "font_family": Font.TITLE.value,
         "font_weight": FontWeight.MEDIUM.value
     },
-    rx.button: {
+    rx.chakra.Button: {
         "width": "100%",
         "height": "100%",
         "padding": Size.SMALL.value,

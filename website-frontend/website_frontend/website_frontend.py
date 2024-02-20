@@ -3,21 +3,32 @@ import reflex as rx
 import website_frontend.constants as const
 import website_frontend.styles.styles as styles
 
+from website_frontend.components.navbar import navbar
+from website_frontend.views.header import header
+from website_frontend.views.links import links
+from website_frontend.views.sponsors import sponsors
+from website_frontend.components.footer import footer
+from website_frontend.styles.styles import Size
+
 # class State(rx.State):
 #     pass
 
 def index() -> rx.Component:
-    return rx.center(
-        rx.theme_panel(),
-        rx.vstack(
-            rx.heading("Welcome to Reflex!", size="9"),            
-            align="center",
-            spacing="7",
-            font_size="2em",
+    return rx.box(
+        navbar(),
+        rx.center(
+            rx.chakra.vstack(
+                header(),
+                links(),
+                # sponsors(),
+                max_width=styles.MAX_WIDTH,
+                width="100%",
+                margin_y=Size.BIG.value,
+                padding=Size.BIG.value
+            )
         ),
-        height="100vh",
+        footer()
     )
-
 
 app = rx.App(
     stylesheets=styles.STYLESHEETS,
