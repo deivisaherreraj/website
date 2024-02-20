@@ -16,7 +16,7 @@ DISCORD_URL = "https://discord.gg/yupHva7N"
 BOOK_URL = "/"
 BOOKS_URL = "/"
 SETUP_URL = "/"
-DHERRERAJDEV_URL = "https://dherreradev.netlify.app/"
+DHERRERAJDEV_URL = "https://dherreraj.netlify.app/"
 COFFEE_URL = "/"
 REPO_URL = "https://github.com/deivisaherreraj/website"
 
