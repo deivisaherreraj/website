@@ -1,5 +1,5 @@
 # Comunes
-G_TAG = ""
+G_TAG = "G-T3G0762RZV"
 
 # Cabecera
 GITHUB_URL = "https://github.com/deivisaherreraj"

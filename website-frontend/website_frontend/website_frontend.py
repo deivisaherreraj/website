@@ -30,12 +30,40 @@ def index() -> rx.Component:
         footer()
     )
 
+# Google tag (gtag.js)
 app = rx.App(
     stylesheets=styles.STYLESHEETS,
-    style=styles.BASE_STYLE
+    style=styles.BASE_STYLE,
+    head_components=[
+        rx.script(
+            src=f"https://www.googletagmanager.com/gtag/js?id={const.G_TAG}"
+        ),
+        rx.script(
+            f"""
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){{dataLayer.push(arguments);}}
+            gtag('js', new Date());
+            gtag('config', '{const.G_TAG}');
+            """
+        ),
+    ],
 )
+
+title = "DherrerajDev | Te enseño programación y desarrollo de software"
+description = "Hola, mi nombre es Deivis Herrera Julio. Soy ingeniero de software, desarrollador full-stack."
+preview = "https://dherrerajdev.netlify.app/preview.png"
+    
 app.add_page(
     index,
-    title = "DherrerajDev | Te enseño programación y desarrollo de software",
-    description = "Hola, mi nombre es Deivis Herrera Julio. Soy ingeniero de software, desarrollador full-stack."
+    title = title,
+    description = description,
+    image = preview,
+    meta = [
+        {"name": "og:type", "content": "website"},
+        {"name": "og:title", "content": title},
+        {"name": "og:description", "content": description},
+        {"name": "og:image", "content": preview},
+        {"name": "twitter:card", "content": "summary_large_image"},
+        {"name": "twitter:site", "content": "@dherrerajdev"}
+    ]
 )
