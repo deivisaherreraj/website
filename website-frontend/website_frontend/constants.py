@@ -5,19 +5,19 @@ G_TAG = "G-T3G0762RZV"
 GITHUB_URL = "https://github.com/deivisaherreraj"
 TWITTER_X_URL = "https://twitter.com/deivisaherreraj"
 INSTAGRAM_URL = "https://instagram.com/deivisaherreraj"
-LINKEDIN_URL = "https://linkedin.com/in/deivisaherreraj/"
+LINKEDIN_URL = "https://linkedin.com/in/deivisaherreraj"
 
 # Comunidad
 TWITCH_URL = "https://twitch.tv/deivisaherreraj"
-YOUTUBE_URL = "https://youtube.com/@deivisandresherrerajulio7139"
-DISCORD_URL = "https://discord.gg/yupHva7N"
+YOUTUBE_URL = "https://youtube.com/@dherrerajdev"
+DISCORD_URL = "https://discord.gg/4pqbjXsrUX"
 
 # Recursos y más
 BOOK_URL = "/"
 BOOKS_URL = "/"
 SETUP_URL = "/"
-DHERRERAJDEV_URL = "https://dherreraj.netlify.app/"
-COFFEE_URL = "/"
+DHERRERAJDEV_URL = "https://dherreraj.netlify.app"
+COFFEE_URL = "https://www.buymeacoffee.com/dherrerajdev"
 REPO_URL = "https://github.com/deivisaherreraj/website"
 
 # Contacto

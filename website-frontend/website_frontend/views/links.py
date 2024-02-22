@@ -34,15 +34,17 @@ def links() -> rx.Component:
             "Mi setup",
             "Listado con todos los elementos que uso en mi trabajo",
             "/icons/setup.svg",
-            const.SETUP_URL,
+            Route.INDEX.value,
+            True,
             False
         ),
         link_button(
-            "DherrerajDev",
+            "DHerreraJDev",
             "Mi sitio web",
             "/icons/developer.svg",
             const.DHERRERAJDEV_URL,
-            True,
+            False,
+            True,            
             Color.SECONDARY.value
         ),
         link_button(
@@ -50,15 +52,17 @@ def links() -> rx.Component:
             "¿Quieres ayudarme a que siga creando contenido?",
             "/icons/coffee.svg",
             const.COFFEE_URL,
+            False,
             False
         ),
 
         title("Contacto"),
         link_button(
-            "MyPublicInbox",
+            "My Public Inbox",
             "Respuesta rápida y con preferencia",
             "/icons/checkemail.svg",
             Route.INDEX.value,
+            True,
             False
         ),
         link_button(

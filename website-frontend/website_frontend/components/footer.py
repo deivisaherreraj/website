@@ -11,12 +11,12 @@ def footer() -> rx.Component:
             src="/logo.png",
             height=Size.VERY_BIG.value,
             width=Size.VERY_BIG.value,
-            alt="Logotipo de DherrerajDev. Una doble > &quot;de&quot; _."
+            alt="Logotipo de DHerreraJDev. Una doble > &quot;de&quot; _."
         ),
         rx.link(
             rx.box(
                 f"Copyright © 2023-{datetime.date.today().year} ",
-                rx.chakra.span("DherrerajDev by Deivis Herrera Julio", color=Color.PRIMARY.value),
+                rx.chakra.span("DHerreraJDev by Deivis Andres Herrera Julio", color=Color.PRIMARY.value),
                 " v1.",
                 padding_top=Size.DEFAULT.value,
                 color=TextColor.BODY.value
@@ -33,7 +33,7 @@ def footer() -> rx.Component:
                     width=Size.LARGE.value
                 ),
                 rx.text(
-                    "BUILDING SOFTWARE WITH ♥ FROM COLOMBIA TO THE WORLD.",
+                    "CONSTRUYENDO SOFTWARE CON ♥ DESDE COLOMBIA PARA EL MUNDO.",
                     font_size=Size.MEDIUM.value,
                     margin_top=Size.ZERO.value,
                     color=TextColor.BODY.value

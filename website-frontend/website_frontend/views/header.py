@@ -6,7 +6,6 @@ from website_frontend.styles.styles import Size
 from website_frontend.styles.colors import Color, TextColor
 from website_frontend.components.link_icon import link_icon
 from website_frontend.components.info_text import info_text
-from website_frontend.components.link_button import link_button
 
 
 def header() -> rx.Component:
@@ -79,8 +78,10 @@ def header() -> rx.Component:
             ),
             rx.text(
                 f"""
-                Soy ingeniero de software, un apasionado/a del desarrollo de software y la tecnología. 
-                Me encanta explorar nuevas ideas y trabajar en proyectos emocionantes. !Bienvenido/a¡
+                Soy ingeniero de software, un apasionado del desarrollo de software y la tecnología.
+                Actualmente trabajo como full-stack developer, mi enfoque se basa en la integración de las tecnologías 
+                más avanzadas en el ámbito del Back-End y Front-End y así explorar nuevas ideas y trabajar en proyectos emocionantes. 
+                Aquí podrás encontrar todos mis enlaces de interés !Bienvenido/a¡
                 """,
                 font_size=Size.DEFAULT.value,
                 color=TextColor.BODY.value

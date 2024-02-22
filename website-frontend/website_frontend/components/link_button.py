@@ -4,7 +4,7 @@ import website_frontend.styles.styles as styles
 from website_frontend.styles.styles import Size, Color
 
 
-def link_button(title: str, subTitle: str, image: str, url: str, is_external=True, highlight_color=None) -> rx.Component:
+def link_button(title: str, subTitle: str, image: str, url: str, is_disabled=False, is_external=True, highlight_color=None) -> rx.Component:
     return rx.link(
         rx.chakra.button(
             rx.chakra.hstack(
@@ -25,6 +25,7 @@ def link_button(title: str, subTitle: str, image: str, url: str, is_external=Tru
                 ),
                 width="100%"
             ),
+            is_disabled=is_disabled,
             border_color=highlight_color,
             border_width="2px" if highlight_color != None else None
         ),

@@ -1,4 +1,3 @@
-"""Welcome to Reflex! This file outlines the steps to create a basic app."""
 import reflex as rx
 import website_frontend.constants as const
 import website_frontend.styles.styles as styles
@@ -49,8 +48,8 @@ app = rx.App(
     ],
 )
 
-title = "DherrerajDev | Te enseño programación y desarrollo de software"
-description = "Hola, mi nombre es Deivis Herrera Julio. Soy ingeniero de software, desarrollador full-stack."
+title = "DHerreraJDev | Desarrollo de software Full-Stack"
+description = "Hola, mi nombre es Deivis Andres Herrera Julio. Soy ingeniero de software, desarrollador Full-Stack."
 preview = "https://dherrerajdev.netlify.app/preview.png"
     
 app.add_page(
