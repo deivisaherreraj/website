@@ -2,36 +2,38 @@ import reflex as rx
 import datetime
 import website_frontend.constants as const
 
-from website_frontend.styles.styles import Size
+from website_frontend.styles.styles import Size, Spacing
 from website_frontend.styles.colors import Color, TextColor
 from website_frontend.components.link_icon import link_icon
 from website_frontend.components.info_text import info_text
 
-
-def header() -> rx.Component:
-    return rx.chakra.vstack(
-        rx.chakra.hstack(
-            rx.chakra.avatar(                
-                name="Deivis Herrera",
-                size="xl",
-                src="/avatar.jpeg",
-                color=TextColor.BODY.value,
-                bg=Color.CONTENT.value,
-                padding="2px",
-                border="4px",
-                border_color=Color.PRIMARY.value
+def header(details=True) -> rx.Component:
+    return rx.vstack(
+        rx.hstack(
+            rx.box(
+                rx.avatar(
+                    name="Deivis Herrera",
+                    size=Spacing.MEDIUM_BIG.value,
+                    src="/avatar.jpeg",
+                    radius="full",
+                    color=TextColor.BODY.value,
+                    bg=Color.CONTENT.value,
+                    padding="2px",
+                    border=f"4px solid {Color.PRIMARY.value}"
+                ),
+                position="relative"
             ),
-            rx.chakra.vstack(
+            rx.vstack(
                 rx.heading(
                     "Deivis Herrera Julio",
-                    size="7"
+                    size=Spacing.BIG.value
                 ),
                 rx.text(
                     "@dherrerajdev",
                     margin_top=Size.ZERO.value,
                     color=Color.PRIMARY.value
                 ),
-                rx.chakra.hstack(
+                rx.hstack(
                     link_icon(
                         "/icons/github.svg",
                         const.GITHUB_URL,
@@ -52,45 +54,51 @@ def header() -> rx.Component:
                         const.LINKEDIN_URL,
                         "LinkedIn"
                     ),
-                    spacing=Size.LARGE.value
+                    spacing=Spacing.LARGE.value,
+                    padding_top=Size.SMALL.value
                 ),
+                spacing=Spacing.ZERO.value,
                 align_items="start"
             ),
-            spacing=Size.DEFAULT.value
+            align="end",
+            spacing=Spacing.DEFAULT.value
         ),
-        rx.chakra.vstack(
-            rx.flex(
-                info_text(
-                    f"{experience()}+",
-                    "años de experiencia"
+        rx.cond(
+            details,
+            rx.vstack(
+                rx.flex(
+                    info_text(
+                        f"{experience()}+",
+                        "años de experiencia"
+                    ),
+                    rx.spacer(),
+                    info_text(
+                        "0+", 
+                        "aplicaciones creadas"
+                    ),
+                    rx.spacer(),
+                    info_text(
+                        "0+", 
+                        "seguidores"
+                    ),
+                    width="100%"
                 ),
-                rx.spacer(),
-                info_text(
-                    "0+", 
-                    "aplicaciones creadas"
+                rx.text(
+                    f"""
+                    Soy ingeniero de software, un apasionado del desarrollo de software y la tecnología.
+                    Actualmente trabajo como full-stack developer, mi enfoque se basa en la integración de las tecnologías 
+                    más avanzadas en el ámbito del Back-End y Front-End y así explorar nuevas ideas y trabajar en proyectos emocionantes. 
+                    Aquí podrás encontrar todos mis enlaces de interés !Bienvenido/a¡
+                    """,
+                    font_size=Size.DEFAULT.value,
+                    color=TextColor.BODY.value
                 ),
-                rx.spacer(),
-                info_text(
-                    "0+", 
-                    "seguidores"
-                ),
-                width="100%"
-            ),
-            rx.text(
-                f"""
-                Soy ingeniero de software, un apasionado del desarrollo de software y la tecnología.
-                Actualmente trabajo como full-stack developer, mi enfoque se basa en la integración de las tecnologías 
-                más avanzadas en el ámbito del Back-End y Front-End y así explorar nuevas ideas y trabajar en proyectos emocionantes. 
-                Aquí podrás encontrar todos mis enlaces de interés !Bienvenido/a¡
-                """,
-                font_size=Size.DEFAULT.value,
-                color=TextColor.BODY.value
-            ),
-            width="100%",
-            spacing=Size.BIG.value
+                width="100%",
+                spacing=Spacing.BIG.value
+            )
         ),
         width="100%",
-        spacing=Size.BIG.value,
+        spacing=Spacing.BIG.value,
         align_items="start"
     )
 

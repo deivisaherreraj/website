@@ -1,4 +1,5 @@
 import reflex as rx
+
 from enum import Enum
 from .colors import Color, TextColor
 from .fonts import Font, FontWeight
@@ -16,6 +17,16 @@ class Size(Enum):
     BIG = "2em"
     VERY_LARGE = "3.5em"
     VERY_BIG = "4em"
+
+class Spacing(Enum):
+    ZERO = "0"
+    VERY_SMALL = "1"
+    SMALL = "3"
+    DEFAULT = "4"
+    LARGE = "5"
+    BIG = "6"
+    MEDIUM_BIG = "7"
+    VERY_BIG = "9"
 
 # Styles
 STYLESHEETS = [
@@ -47,6 +58,7 @@ BASE_STYLE = {
         }
     },
     rx.link: {
+        "color": TextColor.BODY.value,
         "text_decoration": "none",
         "_hover": {}
     }
@@ -67,12 +79,10 @@ title_style = dict(
 button_title_style = dict(
     font_family=Font.TITLE.value,
     font_weight=FontWeight.MEDIUM.value,
-    font_size=Size.DEFAULT.value,
     color=TextColor.HEADER.value
 )
 
 button_body_style = dict(
     font_weight=FontWeight.LIGHT.value,
-    font_size=Size.MEDIUM.value,
     color=TextColor.BODY.value
 )

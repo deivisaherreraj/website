@@ -4,12 +4,21 @@ import website_frontend.constants as const
 from website_frontend.routes import Route
 from website_frontend.components.link_button import link_button
 from website_frontend.components.title import title
-from website_frontend.styles.styles import Size, Color
+from website_frontend.styles.styles import Color, Spacing
 
 
 def links() -> rx.Component:
-    return rx.chakra.vstack(
+    return rx.vstack(
         title("Comunidad"),
+        link_button(
+            "Cursos gratis",
+            "Consulta mis tutoriales para aprender programación",
+            "/icons/code.svg",
+            Route.COURSES.value,
+            False,
+            False,
+            Color.SECONDARY.value
+        ),
         link_button(
             "Twitch",
             "Transmisiones sobre programación de lunes a viernes",
@@ -72,5 +81,5 @@ def links() -> rx.Component:
             f"mailto:{const.EMAIL}"
         ),
         width="100%",
-        spacing=Size.DEFAULT.value,
+        spacing=Spacing.DEFAULT.value,
     )

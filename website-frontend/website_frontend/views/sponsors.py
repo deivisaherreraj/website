@@ -1,14 +1,14 @@
 import reflex as rx
 import website_frontend.constants as const
 
-from website_frontend.styles.styles import Size
+from website_frontend.styles.styles import Spacing
 from website_frontend.components.title import title
 from website_frontend.components.link_sponsor import link_sponsor
 
 def sponsors() -> rx.Component:
-    return rx.chakra.vstack(
+    return rx.vstack(
         title("Colaboran"),
-        rx.chakra.responsive_grid(
+        rx.flex(
             link_sponsor(
                 "/elgato.png",
                 const.ELGATO_URL,
@@ -24,10 +24,10 @@ def sponsors() -> rx.Component:
                 const.GITHUB_STAR_URL,
                 "Logotipo de GitHub Star"
             ),
-            spacing=Size.BIG.value,
-            columns=[1, 3]
+            spacing=Spacing.BIG.value,
+            flex_direction=["column", "row"]
         ),
         width="100%",
         align_items="start",
-        spacing=Size.MEDIUM.value
+        spacing=Spacing.DEFAULT.value
     )
