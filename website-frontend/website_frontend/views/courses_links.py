@@ -8,10 +8,10 @@ from website_frontend.styles.styles import Color, Spacing
 
 def courses_links() -> rx.Component:
     return rx.vstack(
-        title("Cursos gratis"),
+        title("Tutoriales gratis"),
         link_button(
             "C# desde cero",
-            "Curso de +37h: Fundamentos, backend, testing...",
+            "Tutorial de +37h: Fundamentos, backend, testing...",
             "/icons/csharp.svg",
             const.CSHARP_COURSE_URL,
             True,

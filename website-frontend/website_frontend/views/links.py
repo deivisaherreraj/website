@@ -11,7 +11,7 @@ def links() -> rx.Component:
     return rx.vstack(
         title("Comunidad"),
         link_button(
-            "Cursos gratis",
+            "Guías y tutoriales gratis",
             "Consulta mis tutoriales para aprender programación",
             "/icons/code.svg",
             Route.COURSES.value,

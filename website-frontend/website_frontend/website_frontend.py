@@ -5,6 +5,9 @@ import website_frontend.styles.styles as styles
 from website_frontend.pages.index import index
 from website_frontend.pages.courses import courses
 
+class State(rx.State):
+    pass
+
 # Google tag (gtag.js)
 app = rx.App(
     stylesheets=styles.STYLESHEETS,

@@ -76,11 +76,6 @@ def header(details=True) -> rx.Component:
                         "0+", 
                         "aplicaciones creadas"
                     ),
-                    rx.spacer(),
-                    info_text(
-                        "0+", 
-                        "seguidores"
-                    ),
                     width="100%"
                 ),
                 rx.text(
