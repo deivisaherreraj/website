@@ -1,4 +1,5 @@
 #! /bin/bash
+
 echo -e "Start running the script!"
 echo -e "Step 1: Upgrading pip..."
 pip install --upgrade pip
