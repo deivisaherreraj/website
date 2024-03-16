@@ -2,9 +2,9 @@
 
 echo -e "Start running the script!"
 
-# Cambia al directorio 'website-frontend'
-echo -e "Changing directory to 'website-frontend'..."
-cd website-frontend
+# Cambia al directorio 'website_frontend'
+echo -e "Changing directory to 'website_frontend'..."
+cd website_frontend
 # Crea un entorno virtual en el directorio actual llamado '.venv'
 echo -e "Creating a virtual environment named '.venv'..."
 python -m venv .venv
