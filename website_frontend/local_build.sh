@@ -10,7 +10,7 @@ rm -rf public
 echo -e "Step 4: Initializing reflex..."
 reflex init
 echo -e "Step 5: Exporting with reflex (frontend-only)..."
-reflex export --frontend-only
+API_URL=https://api-dherreraj-dev.up.railway.app reflex export --frontend-only
 echo -e "Step 6: Unzipping frontend files to 'public' directory..."
 unzip frontend.zip -d public
 echo -e "Step 7: Removing frontend.zip..."
