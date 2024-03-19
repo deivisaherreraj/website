@@ -8,12 +8,14 @@ from website_frontend.views.links import links
 from website_frontend.views.sponsors import sponsors
 from website_frontend.views.footer import footer
 from website_frontend.styles.styles import Size
+from website_frontend.state.PageState import PageState
 
 @rx.page(
     title=utils.index_title,
     description=utils.index_description,
     image=utils.preview,
-    meta=utils.index_meta
+    meta=utils.index_meta,
+    on_load=PageState.check_live
 )
 def index() -> rx.Component:
     return rx.box(
@@ -21,7 +23,9 @@ def index() -> rx.Component:
         navbar(),
         rx.center(
             rx.vstack(
-                header(),
+                header(
+                    live=PageState.live_status
+                ),
                 links(),
                 # sponsors(),
                 max_width=styles.MAX_WIDTH,

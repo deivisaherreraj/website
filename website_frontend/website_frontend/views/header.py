@@ -7,10 +7,29 @@ from website_frontend.styles.colors import Color, TextColor
 from website_frontend.components.link_icon import link_icon
 from website_frontend.components.info_text import info_text
 
-def header(details=True) -> rx.Component:
+def header(details=True, live=False) -> rx.Component:
     return rx.vstack(
         rx.hstack(
             rx.box(
+                rx.cond(
+                    live,
+                    rx.link(
+                        rx.image(
+                            src="/icons/twitch.svg",
+                            height=Size.DEFAULT.value,
+                            width=Size.DEFAULT.value
+                        ),
+                        href=const.TWITCH_URL,
+                        is_external=True,
+                        class_name="blink",
+                        border_radius="50%",
+                        padding=Size.SMALL.value,
+                        bg=Color.PURPLE.value,
+                        position="absolute",
+                        bottom="0",
+                        right="0"
+                    )
+                ),
                 rx.avatar(
                     name="Deivis Herrera",
                     size=Spacing.MEDIUM_BIG.value,
