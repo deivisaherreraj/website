@@ -7,6 +7,11 @@ from .fonts import Font, FontWeight
 # Constants
 MAX_WIDTH = "560px"
 
+# Logo
+class Logo(Enum):
+    HEIGHT = "3.3em"
+    WIDTH = "6em"
+
 # Sizes
 class Size(Enum):
     ZERO = "0px !important"

@@ -24,14 +24,16 @@ def courses_links() -> rx.Component:
             "Twitch",
             "Transmisiones sobre programación de lunes a viernes",
             "/icons/twitch.svg",
-            const.TWITCH_URL
+            const.TWITCH_URL,
+            True
         ),
         link_button(
             "YouTube",
             "Tutoriales sobre desarrollo de software semanales",
             "/icons/youtube.svg",
-            const.YOUTUBE_URL
-        ),
+            const.YOUTUBE_URL,
+            True
+        ),        
         width="100%",
         spacing=Spacing.DEFAULT.value,
     )

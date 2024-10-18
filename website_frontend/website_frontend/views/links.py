@@ -11,19 +11,13 @@ def links() -> rx.Component:
     return rx.vstack(
         title("Comunidad"),
         link_button(
-            "Guías y tutoriales gratis",
+            "Guías y tutoriales",
             "Consulta mis tutoriales para aprender programación",
             "/icons/code.svg",
             Route.COURSES.value,
-            False,
+            True,
             False,
             Color.SECONDARY.value
-        ),
-        link_button(
-            "Twitch",
-            "Transmisiones sobre programación de lunes a viernes",
-            "/icons/twitch.svg",
-            const.TWITCH_URL
         ),
         link_button(
             "Discord",
@@ -31,14 +25,22 @@ def links() -> rx.Component:
             "/icons/discord.svg",
             const.DISCORD_URL
         ),
+        
+        title("Plataformas de trabajo"),
         link_button(
-            "YouTube",
-            "Tutoriales sobre desarrollo de software semanales",
-            "/icons/youtube.svg",
-            const.YOUTUBE_URL
+            "Workana",
+            "Perfil de Workana donde ofrezco mis servicios como freelance",
+            "/icons/freelancer.svg",
+            const.WORKANA_URL
+        ),
+        link_button(
+            "Gumroad",
+            "Mi tienda en Gumroad donde vendo recursos, cursos, o productos digitales",
+            "/icons/gumroad.svg",
+            const.GUMROAD_URL
         ),
                 
-        title("Recursos y más"),        
+        title("Recursos y más"),
         link_button(
             "Mi setup",
             "Listado con todos los elementos que uso en mi trabajo",

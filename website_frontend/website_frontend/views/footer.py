@@ -2,7 +2,7 @@ import reflex as rx
 import datetime
 import website_frontend.constants as const
 
-from website_frontend.styles.styles import Size, Spacing
+from website_frontend.styles.styles import Size, Spacing, Logo
 from website_frontend.styles.colors import Color, TextColor
 from website_frontend.components.float_button import float_button
 
@@ -10,8 +10,8 @@ def footer() -> rx.Component:
     return rx.vstack(
         rx.image(
             src="/logo.png",
-            height=Size.VERY_BIG.value,
-            width=Size.VERY_BIG.value,
+            height=Logo.HEIGHT.value,
+            width=Logo.WIDTH.value,
             alt="Logotipo de DHerreraJDev. Una doble > &quot;de&quot; _."
         ),
         rx.link(

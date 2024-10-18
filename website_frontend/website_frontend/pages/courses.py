@@ -27,7 +27,8 @@ def courses() -> rx.Component:
             rx.vstack(
                 header(
                     details=False,
-                    live=PageState.live_status
+                    live=PageState.live_status,
+                    live_title=PageState.live_title
                 ),
                 courses_links(),
                 # sponsors(),

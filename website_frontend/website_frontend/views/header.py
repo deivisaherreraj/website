@@ -6,8 +6,9 @@ from website_frontend.styles.styles import Size, Spacing
 from website_frontend.styles.colors import Color, TextColor
 from website_frontend.components.link_icon import link_icon
 from website_frontend.components.info_text import info_text
+from website_frontend.components.link_button import link_button
 
-def header(details=True, live=False) -> rx.Component:
+def header(details=True, live=False, live_title="") -> rx.Component:
     return rx.vstack(
         rx.hstack(
             rx.box(
@@ -59,16 +60,6 @@ def header(details=True, live=False) -> rx.Component:
                         "GitHub"
                     ),
                     link_icon(
-                        "/icons/x.svg",
-                        const.TWITTER_X_URL,
-                        "Twitter/X"
-                    ),
-                    link_icon(
-                        "/icons/instagram.svg",
-                        const.INSTAGRAM_URL,
-                        "Instagram"
-                    ),                    
-                    link_icon(
                         "/icons/linkedin.svg",
                         const.LINKEDIN_URL,
                         "LinkedIn"
@@ -90,17 +81,24 @@ def header(details=True, live=False) -> rx.Component:
                         f"{experience()}+",
                         "años de experiencia"
                     ),
-                    rx.spacer(),
-                    info_text(
-                        "0+", 
-                        "aplicaciones creadas"
-                    ),
                     width="100%"
+                ),
+                rx.cond(
+                    live,
+                    link_button(
+                        "En directo",
+                        live_title,
+                        "/icons/twitch.svg",
+                        const.TWITCH_URL,
+                        False,
+                        True,
+                        Color.PURPLE.value
+                    )
                 ),
                 rx.text(
                     f"""
-                    Soy ingeniero de software, un apasionado del desarrollo de software y la tecnología.
-                    Actualmente trabajo como full-stack developer, mi enfoque se basa en la integración de las tecnologías 
+                    Soy full-stack developer, un apasionado del desarrollo de software y la tecnología, 
+                    mi enfoque se basa en la integración de las tecnologías 
                     más avanzadas en el ámbito del Back-End y Front-End y así explorar nuevas ideas y trabajar en proyectos emocionantes. 
                     Aquí podrás encontrar todos mis enlaces de interés !Bienvenido/a¡
                     """,

@@ -26,7 +26,7 @@ index_meta.extend(_meta)
 # Guías/Tutoriales
 
 courses_title = "DHerreraJDev | Guías/Tutoriales gratis de programación"
-courses_description = "Este es un listado con algunas guías y tutoriales gratis para aprender programación y desarrollo de software."
+courses_description = "Este es un listado con algunas guías y tutoriales para aprender programación y desarrollo de software."
 
 courses_meta = [
     {"name": "og:title", "content": courses_title},

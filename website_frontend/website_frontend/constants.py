@@ -1,17 +1,21 @@
 # Comunes
 G_TAG = "G-T3G0762RZV"
-USER = "deivisaherreraj"
+USER = "cl4sius"
 
 # Cabecera
 GITHUB_URL = "https://github.com/deivisaherreraj"
-TWITTER_X_URL = "https://twitter.com/deivisaherreraj"
-INSTAGRAM_URL = "https://instagram.com/deivisaherreraj"
+TWITTER_X_URL = "/"
+INSTAGRAM_URL = "/"
 LINKEDIN_URL = "https://linkedin.com/in/deivisaherreraj"
 
 # Comunidad
 TWITCH_URL = "https://twitch.tv/deivisaherreraj"
 YOUTUBE_URL = "https://youtube.com/@dherrerajdev"
 DISCORD_URL = "https://discord.gg/4pqbjXsrUX"
+
+# Plataformas de trabajo
+WORKANA_URL = "https://www.workana.com/freelancer/e466a72ac24f41aa356be17f406b3f9b"
+GUMROAD_URL = "https://dherrerajdev.gumroad.com/"
 
 # Recursos y más
 BOOK_URL = "/"
