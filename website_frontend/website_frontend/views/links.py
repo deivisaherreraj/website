@@ -10,15 +10,16 @@ from website_frontend.styles.styles import Color, Spacing
 def links() -> rx.Component:
     return rx.vstack(
         title("Comunidad"),
-        link_button(
-            "Guías y tutoriales",
-            "Consulta mis tutoriales para aprender programación",
-            "/icons/code.svg",
-            Route.COURSES.value,
-            True,
-            False,
-            Color.SECONDARY.value
-        ),
+        # TODO Habilitar función solo cuando se tengo los tutorias o videos
+        # link_button(
+        #     "Guías y tutoriales",
+        #     "Consulta mis tutoriales para aprender programación",
+        #     "/icons/code.svg",
+        #     Route.COURSES.value,
+        #     True,
+        #     False,
+        #     Color.SECONDARY.value
+        # ),
         link_button(
             "Discord",
             "El chat y los grupos de estudio de la comunidad",

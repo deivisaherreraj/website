@@ -28,6 +28,7 @@ def index() -> rx.Component:
                     live_title=PageState.live_title
                 ),
                 links(),
+                # TODO Habilitar función solo cuando se tenga lo necesario
                 # sponsors(),
                 max_width=styles.MAX_WIDTH,
                 width="100%",
