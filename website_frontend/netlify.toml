@@ -1,3 +1,0 @@
-[build]
-  command = "bash local_build.sh"
-  publish = "public"
