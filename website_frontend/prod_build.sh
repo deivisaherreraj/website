@@ -23,7 +23,7 @@ echo -e "Step 5: Installing required Python packages..."
 pip install -r requirements.txt
 
 # Elimina cualquier directorio existente llamado 'public'
-echo -e "Step 5: Removing any existing 'public' directory..."
+echo -e "Step 6: Removing any existing 'public' directory..."
 rm -rf public
 
 # Inicializa reflex para el seguimiento de cambios
